@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AX2 고객상담 챗봇</title>
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+    <!-- 챗봇 토글 버튼 -->
+    <button class="chatbot-toggle" id="chatbotToggle" aria-label="챗봇 열기">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H6L4 18V4H20V16Z" fill="currentColor"/>
+            <path d="M7 9H17V11H7V9ZM7 12H14V14H7V12Z" fill="currentColor"/>
+        </svg>
+    </button>
+
+    <!-- 챗봇 컨테이너 -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <!-- 챗봇 헤더 -->
+        <div class="chatbot-header">
+            <div class="chatbot-header-info">
+                <h3 class="chatbot-service-name" id="serviceName">AX2 고객상담</h3>
+                <p class="chatbot-status" id="chatbotStatus">몇 분 내 답변 가능</p>
+            </div>
+            <button class="chatbot-close" id="chatbotClose" aria-label="챗봇 닫기">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- 챗봇 메시지 영역 -->
+        <div class="chatbot-messages" id="chatbotMessages">
+            <!-- 메시지들이 여기에 동적으로 추가됩니다 -->
+        </div>
+
+        <!-- 챗봇 입력/버튼 영역 -->
+        <div class="chatbot-input-area">
+            <div class="chatbot-buttons" id="chatbotButtons">
+                <!-- 질문 버튼들이 여기에 동적으로 추가됩니다 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>
+

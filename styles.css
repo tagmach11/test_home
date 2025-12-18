@@ -2584,9 +2584,12 @@ section {
 
 .blog-card {
     background: var(--secondary-color);
-    padding: var(--spacing-md);
+    padding: 0;
     border-radius: 8px;
     transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .blog-card:hover {
@@ -2594,9 +2597,37 @@ section {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.blog-thumbnail {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: var(--bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-thumbnail img {
+    transform: scale(1.05);
+}
+
+.blog-card .blog-title,
+.blog-card .blog-date,
+.blog-card .blog-excerpt {
+    padding: 0 var(--spacing-md);
+}
+
 .blog-title {
     font-size: 1.2rem;
     font-weight: 700;
+    margin-top: var(--spacing-md);
     margin-bottom: var(--spacing-xs);
     line-height: 1.5;
 }
@@ -2606,11 +2637,13 @@ section {
     color: var(--text-light);
     line-height: 1.6;
     margin-top: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
 }
 
 .blog-date {
     color: var(--text-light);
     font-size: 0.9rem;
+    margin-bottom: var(--spacing-xs);
 }
 
 .blog-action {
